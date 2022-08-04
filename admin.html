@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+   <div class="main-div">
+       <div class="div1 menu-link">
+                   <span class="dashboard-link active-link" onclick="handleShowMenu('dashboard')"><i class="bi-house-door-fill"></i>Dashboard</span> 
+                   <span class="names-link " onclick="handleShowMenu('names')"><i class="bi-clipboard" >Names</i></span>
+       </div>
+       <div class="div2 main-content">
+           <div class="dash-div dashboard-div">
+               <div class="div21">
+                   <span class="sp1" style="background-color: green;" ></span>
+                   <span class="sp1" style="background-color: blue;"></span>
+               </div>
+               <div class="div21" >
+                   <span class="sp1" style="background-color: yellow;"></span>
+                   <span class="sp1" style="background-color: red;"></span>
+               </div>
+           </div>
+           <div class="names-div">
+                <div class="N-div real-name">
+                    <button class="btn add-link tapped" onclick="handleShowName('add')">Add New Name</button>
+                    <button class="btn view-link" onclick="handleShowName('view')">View All Names</button>
+                </div>
+                <div class="name-content">
+                   <div class="last-div add-div">
+                         <input type="text" class="inp" id="nameinp" placeholder="Enter Name">
+                         <button class="btn1" onclick="addNewNames()">done</button>
+                   </div>
+                   <div class="last2 view-div" id="names-list-div">
+                       <div class="last3">
+                       <input type="text" disabled name="" class="inp1" value="Akin" id="">
+                       <button class="btn2" onclick="handleDone(0)">Done</button>
+                       <div>
+                            <div class="dot" onclick="handleDisplay(this)">
+                                <span class="span2"></span>
+                                <span class="span2"></span>
+                                <span class="span2"></span>
+                            </div>
+                            <div class="edit">
+                                <span class="span4" onclick="handleDisplay(1,2)">&#10006</span><br>
+                                <span class="span3" onclick="handleEdit(0)">Edit</span><br>
+                                <span class="span3" onclick="handleDelete(0)">Delete</span>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="last3">
+                        <input type="text" disabled name="" class="inp1" value="Akin" id="">
+                        <button class="btn2" onclick="handleDone(1)">Done</button>
+                        <div>
+                             <div class="dot" onclick="handleDisplay(this)">
+                                 <span class="span2"></span>
+                                 <span class="span2"></span>
+                                 <span class="span2"></span>
+                             </div>
+                             <div class="edit">
+                                 <span class="span4" onclick="handleDisplay(1,2)">&#10006</span><br>
+                                 <span class="span3" onclick="handleEdit(1)">Edit</span><br>
+                                 <span class="span3" onclick="handleDelete(1)">Delete</span>
+                             </div>
+                         </div>
+                       </div>
+                   </div>
+                </div>
+           </div>
+       </div>  
+   </div>
+   <script src="admin.js"></script>
+</body>
+</html>
